@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <title>{{ page.title | escape }} · CLike</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-chtml.js"></script>
+</head>
+<body>
+  <a class="skip" href="#content">跳至正文</a>
+  <aside>
+    <a class="brand" href="{{ '/' | relative_url }}">CLike<span>RESEARCH NOTES</span></a>
+    <p class="side-title">Single-cell<br>simulation</p>
+    <nav aria-label="文档导航">
+      {% assign links = 'index:概览,model:生成模型,settings:实验设置,evaluation:方法与评价,history:版本脉络,sources:来源与复现' | split: ',' %}
+      {% for item in links %}{% assign pair = item | split: ':' %}{% assign slug = pair[0] %}
+      <a href="{{ '/' | append: slug | append: '.html' | relative_url }}" {% if page.slug == slug %}aria-current="page"{% endif %}>{{ pair[1] }}</a>
+      {% endfor %}
+    </nav>
+    <div class="side-note">本地 UKBB 遗传结构<br>模拟表型与细胞噪声<br><span>核对日期 · 2026-09-17</span></div>
+    <a class="repo" href="https://github.com/SuranCHEN/single-cell-simulation-docs">查看 Markdown 源文件 ↗</a>
+  </aside>
+  <main id="content">
+    <header><span>MODEL & SETTINGS</span><span>文档版本 2026.09</span></header>
+    <article>{{ content }}</article>
+    <footer>CLike · Single-cell simulation · 本文档记录已执行设置；参数依据和适用范围见各页说明。</footer>
+  </main>
+</body>
+</html>

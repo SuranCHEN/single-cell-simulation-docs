@@ -1,0 +1,67 @@
+{
+  "status": "frozen_before_new_scores",
+  "date": "2026-09-15",
+  "centers": [
+    31263287,
+    37199593,
+    39694225,
+    42313324,
+    44324730,
+    46518082
+  ],
+  "donor_n": 500,
+  "target_cells": 1000,
+  "causal_replicates": [
+    351,
+    400
+  ],
+  "null_replicates": [
+    376,
+    400
+  ],
+  "expected_inputs": 1950,
+  "expected_shared": 900,
+  "expected_negative": 1050,
+  "methods": [
+    "original_CLike",
+    "CLike_dimension",
+    "coloc.abf"
+  ],
+  "primary_target_pct": 99,
+  "decision": "status ok and finite score strictly below saved cutoff => filtered; ties and no-call forwarded",
+  "protection": "Every shared scenario evaluated separately, 300 inputs each, <=3 losses per scenario; no retuning",
+  "generation": "Existing UKBB bank and original causal/phenotype generators, including historical random draw order; no genotype or variance changes",
+  "counts": "Five causal scenarios: 6 loci x 50 each; H0/H1/H2: 6 loci x 25 each",
+  "seed_check": {
+    "new_numpy": 3000,
+    "new_R": 1650,
+    "collisions": 0
+  },
+  "scope": "Confirm prescreening retention/filtering. No runtime benchmark or new SuSiE/no-CS claim.",
+  "cutoffs": [
+    {
+      "method": "original_CLike",
+      "donor_n": 500,
+      "target_cells": 1000,
+      "target_pct": 99,
+      "cutoff": 0.238302279300059,
+      "limiting_scenarios": "double_shared2"
+    },
+    {
+      "method": "CLike_dimension",
+      "donor_n": 500,
+      "target_cells": 1000,
+      "target_pct": 99,
+      "cutoff": 1.86995769551458,
+      "limiting_scenarios": "double_shared2"
+    },
+    {
+      "method": "coloc.abf",
+      "donor_n": 500,
+      "target_cells": 1000,
+      "target_pct": 99,
+      "cutoff": 2.48048323978619e-17,
+      "limiting_scenarios": "double_shared1"
+    }
+  ]
+}

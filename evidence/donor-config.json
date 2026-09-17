@@ -1,0 +1,129 @@
+{
+  "version": "sc_1mb_donor_20260911_v1",
+  "seed": 20260910,
+  "candidate_centers": [
+    31263287,
+    37199593,
+    39694225,
+    42313324,
+    44324730,
+    46518082
+  ],
+  "n_gwas": 20000,
+  "qtl_donor_n": [
+    500,
+    1000,
+    1250
+  ],
+  "target_cells_per_donor": [
+    10,
+    50,
+    200,
+    1000
+  ],
+  "scenarios": [
+    "single_shared",
+    "single_distinct",
+    "double_shared2",
+    "double_shared1",
+    "double_distinct"
+  ],
+  "shared_scenarios": [
+    "single_shared",
+    "double_shared2",
+    "double_shared1"
+  ],
+  "negative_scenarios": [
+    "single_distinct",
+    "double_distinct"
+  ],
+  "simulation": {
+    "primary_h2_reference_scale": 0.2,
+    "donor_variance": 0.8,
+    "cell_variance": 8.0,
+    "cell_model": "normalized Gaussian target-cell mean with nested cell-sum increments",
+    "depth_pairing": "within each donor cohort: same locus, causal variants, effects, GWAS, donor noise and nested target cells across m=10,50,200,1000; donor cohorts n=500,1000,1250 are nested by identity, retain cohort-specific mean imputation, use independent phenotype noise across n, and preserve the old RNG namespace by consuming the omitted n=100 and n=200 QTL streams first",
+    "depth_noise_variance": "Var(e_m)=8/m; Cov(e_m,e_M)=8/max(m,M)",
+    "rng_namespace": "seed 20260910 with the historical n=100 and n=200 QTL draw positions consumed before the new donor cohorts"
+  },
+  "input_policy": {
+    "missing_genotype": "cohort-specific mean imputation inherited from the frozen v1 bank",
+    "snp_rule": "retain every SNP in the frozen 1 Mb bank; min_block_snps is a score eligibility rule, never an input filter",
+    "failure_rule": "stop the affected shard on any zero variance, invalid LD, non-finite association statistic, or source mismatch",
+    "causal_reference_af_open_interval": [
+      0.05,
+      0.95
+    ],
+    "distinct_causal_abs_r_open_upper": 0.2
+  },
+  "calibration": {
+    "development_replicates": [
+      201,
+      300
+    ],
+    "confirmation_replicates": [
+      301,
+      350
+    ],
+    "selection_tail_rate": 0.01,
+    "error_reference": 0.05,
+    "threshold_rule": "one threshold per method, donor n and target-cell depth; use the most stringent threshold from single_distinct and double_distinct",
+    "comparison": "strict greater than",
+    "confirmation_role": "historical-locus confirmation on the same six calibration loci with disjoint replicates 301-350; no held-out locus test",
+    "primary_depth_contrast": [
+      10,
+      1000
+    ],
+    "adjacent_depth_contrasts": [
+      [
+        10,
+        50
+      ],
+      [
+        50,
+        200
+      ],
+      [
+        200,
+        1000
+      ]
+    ],
+    "q5b_rule": "shared-truth SuSiE-no-CS conditional CLike recovery raw proportion >=0.05 and lower95>0; M=0 is not estimable"
+  },
+  "revised_clike": {
+    "gwas_lead_p_threshold": 5e-08,
+    "scqtl_lead_p_threshold": 1e-05,
+    "lead_clump_r2": 0.1,
+    "local_block_r2": 0.3,
+    "lambda": 0.0001,
+    "min_block_snps": 5,
+    "lead_pair_rule": "all clumped GWAS-by-SCQTL lead pairs; locus score is the maximum finite absolute cosine",
+    "excluded_web_features": "no sample-size role inference, no conditional clump, no min-p fallback, no global-before-local whitening"
+  },
+  "primary_methods": [
+    "CLike baseline",
+    "CLike QTL p<1e-3",
+    "coloc.abf",
+    "coloc.susie"
+  ],
+  "supplementary_methods": [],
+  "susie": {
+    "L": 10,
+    "coverage": 0.95,
+    "min_abs_cor": 0.5,
+    "max_iter": [
+      100,
+      500
+    ],
+    "estimate_residual_variance": true
+  },
+  "coloc_priors": {
+    "p1": 0.0001,
+    "p2": 0.0001,
+    "p12": 1e-05
+  },
+  "probe": {
+    "center": 31263287,
+    "replicate": 10001
+  }
+}

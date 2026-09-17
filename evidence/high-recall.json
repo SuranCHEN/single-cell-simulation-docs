@@ -1,0 +1,49 @@
+{
+  "status": "frozen_before_evaluation",
+  "objective": "High-recall prescreening before expensive follow-up; no-CS is a subgroup, not the primary population.",
+  "methods": [
+    "original_CLike",
+    "CLike_dimension",
+    "coloc.abf"
+  ],
+  "primary_target_pct": 99,
+  "targets_pct": [
+    95,
+    96,
+    97,
+    98,
+    99,
+    100
+  ],
+  "donors": [
+    100,
+    200,
+    500
+  ],
+  "target_cells": [
+    10,
+    1000
+  ],
+  "positive_scenarios": [
+    "single_shared",
+    "double_shared1",
+    "double_shared2"
+  ],
+  "lead_rule": "Both sides P<1e-3; unchanged original candidates, local ridge whitening, min-block 5. Existing dimension transform only; no count penalty.",
+  "cutoff_rule": "Per method/donor/depth: each shared scenario permits floor((100-target)*N/100) losses, N includes no-call; cut is the (allowed+1)th ascending valid finite score, or Inf if all finite scores may be lost. Common cut=min of the three scenario cuts. Only status ok & finite & score<cut is filtered; ties and no-call are forwarded.",
+  "protection_scope": "Development protection is per shared scenario pooled over six centers, not per center or no-CS subgroup. Evaluation protection passes only if every shared scenario empirical retention >= target; no post-evaluation retuning.",
+  "primary_comparison": "At frozen 99% target, compare actual per-scenario losses, negative filtering and per-center paired changes. Descriptive dominance requires dimension meets protection, has no more losses in any shared scenario than original, and filters more nonshared inputs. Same target is not equal realized safety. No claim of universal or statistically established dominance.",
+  "stop_rule": "Do not tune new parameters or add scores. If no stable high-recall filtering advantage, retain original and stop this dimension-score branch. Runtime requires a separate conditional decision and is not measured here.",
+  "development": "Historical shared inputs, replicates 201:300; calibration by shared truth only.",
+  "evaluation": "Saved full evaluation inputs: historical five causal scenarios rep301:350; H0/H1/H2 rep326:350. All method rows paired, no-call not dropped.",
+  "limitations": [
+    "Six previously examined UKBB chr22 loci; repeated development, internally exploratory",
+    "Replicate separation is not independent-locus validation",
+    "99% empirical development target is not a population guarantee",
+    "Simulation mixture-weighted task reduction is not real-world speedup",
+    "Beta transform is a ranking reference, not a calibrated P value"
+  ],
+  "simulations": 0,
+  "original_score_refits": 0,
+  "susie_refits": 0
+}

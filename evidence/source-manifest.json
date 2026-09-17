@@ -1,0 +1,142 @@
+{
+  "verified_on": "2026-09-17",
+  "purpose": "Documentation provenance; source files are not all distributed",
+  "files": [
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_1mb_depth_20260910_v1/protocol.json",
+      "source_sha256": "4157e300a9ec88126e772137b49a6249b82b751b04749f1ce68689f8aef4814c",
+      "published_file": "depth-20260910.json",
+      "published_sha256": "c3a99ec26ec7ad81c33b8bc21a02c56bded56786ef6a55bfb39ac0d73414ee4a",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_1mb_donor_20260911_v1/config.json",
+      "source_sha256": "4bb812026755dd34b8cfd76dcc5934e1f032933705c844df11948e204240c083",
+      "published_file": "donor-config.json",
+      "published_sha256": "181b6fa7c3e5a4eda31e21374a516bc598aeab3c397bfbf095365061fce8f035",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_symmetric_20260912_v1/full/protocol.json",
+      "source_sha256": "ff2994d618da6901ccc4041ff0a53e44ff9e2e603aaa91fcfe20cfba56d7aae3",
+      "published_file": "symmetric-20260912.json",
+      "published_sha256": "587e60fe8e8099e755ac2db11512c0f3d2c53cc6cf88b84bea60f9f206f517d3",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_high_recall_20260914_v1/protocol.json",
+      "source_sha256": "ac5690db153fd9609e8537935e5103a8b7a38ee5490cce46b50bdeedcd440ddd",
+      "published_file": "high-recall.json",
+      "published_sha256": "674f9b93a81e73b342179ee8a20c06f5e945d57b6ef251725b4cf05db384fced",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_dimension_confirm_20260915_v1/PROTOCOL.json",
+      "source_sha256": "e483a878ad3a1c6fe0d7fda2f4b5175874c0be32018fa8aad5e26fa104a34437",
+      "published_file": "confirmation.json",
+      "published_sha256": "eaa980868a8a4523aa8a6e57a9c965d5ec369f95e4ac36e25b5c565dcc142fef",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_formal_20260907_v1/protocol.json",
+      "source_sha256": "250fe6fd69e24fd2c1b337a6a0dd3a5d2be957bdcba644c44fc69e23769ca1e7",
+      "published_file": "formal-20260907.json",
+      "published_sha256": "6c9bdf176e7405033e8d8b5890a21e1ef279df947b9789c7ea6bf256f39a659a",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_dimension_confirm_20260915_v1/COMPLETE.json",
+      "source_sha256": "23cc56301c652ece1de0e4f24045070ec3d70cb8dce5df46936c6b349f5a1294",
+      "published_file": "confirmation-complete.json",
+      "published_sha256": "23cc56301c652ece1de0e4f24045070ec3d70cb8dce5df46936c6b349f5a1294",
+      "transformation": "JSON excerpt: removed machine/source-hash maps and execution resource/path fields"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_dimension_confirm_20260915_v1/summary.tsv",
+      "source_sha256": "0e1d18f8c37a468e07d66060fc0021fb8059fafaf065568e4026f5e8cecfad66",
+      "published_file": "confirmation-summary.tsv",
+      "published_sha256": "0e1d18f8c37a468e07d66060fc0021fb8059fafaf065568e4026f5e8cecfad66",
+      "transformation": "unchanged aggregate TSV"
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_1mb_pattern_20260909_v1/prepare_bank.py",
+      "source_sha256": "a4c2755502df0c9d56c53a5ed1f0093f8868ce3dff1c22e6b8216955c95e920f",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_1mb_depth_20260910_v1/prepare_extension.py",
+      "source_sha256": "b7f2a943e5923623620adc349bac2bc614b2369e856f8e43e06b70dddc16f1ea",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_1mb_depth_20260910_v1/run_shard.R",
+      "source_sha256": "19dda56580a94981120cd57c023f43a46ccf8f53460fdb94b4e4c4231f0430fe",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_1mb_donor_20260911_v1/run_shard.R",
+      "source_sha256": "8bcb7b71a5f9ed9180fbeb447589275d63b793dcf943acb1189d864d87f42707",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "R/original_clike.R",
+      "source_sha256": "049c3b740397080c933f2e99a8b0fe4bff10a9e0fe09baf44ba6f9953dbc75b7",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_high_recall_20260914_v1/run.R",
+      "source_sha256": "066cc81a7672ad419ff35ad6aadc50720bc6b8a2b284bc239a2fa94b4346c4a7",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_dimension_confirm_20260915_v1/run.R",
+      "source_sha256": "5ff9fad989ff316e758af3ac74aeafec87889d0934fe0faddc3f10b92d2f558b",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_dimension_confirm_20260915_v1/finish.R",
+      "source_sha256": "c31603bac57c1b7b379ca6e60bea57155a30499a5acb343b54ec966cdd6c04a7",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "scripts/sc_dimension_confirm_20260915_v1/verify.py",
+      "source_sha256": "c4abcc9f8014087d7b7617fe725851a5555b26f5e372721514f087f33f81590f",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_result_diagnostic_20260907_v1/排查结论.md",
+      "source_sha256": "9ce0efaaa212f9b59084983de772f2e97ca4f12ca6649c9dd753dd0717150a77",
+      "published_file": null
+    },
+    {
+      "source_root": "clike_ldblock_coloc_handoff_20260811",
+      "source_path": "outputs/sc_source_reconciliation_20260909_v1/核对结论.md",
+      "source_sha256": "c410aa1ebd248c315231b561bd51d424a43b4ff76533384f295da582973802e4",
+      "published_file": null
+    },
+    {
+      "source_root": "Coloc_project",
+      "source_path": "clike-正向成果/12_完整学习与组会材料_20260917/完整学习文档.md",
+      "source_sha256": "f72f680198ae074305fc9916c4a084838b78ab48aad490ddcfa931e3c0eb7a45",
+      "published_file": null
+    }
+  ]
+}

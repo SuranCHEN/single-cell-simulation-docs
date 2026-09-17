@@ -1,0 +1,4 @@
+method	shared_N	shared_lost	negative_N	negative_filtered	no_call	protection_pass	worst_shared_loss_pct	negative_filter_pct
+"CLike_dimension"	900	3	1050	343	411	TRUE	1	32.6666666666667
+"coloc.abf"	900	3	1050	214	0	TRUE	0.666666666666667	20.3809523809524
+"original_CLike"	900	2	1050	144	411	TRUE	0.666666666666667	13.7142857142857

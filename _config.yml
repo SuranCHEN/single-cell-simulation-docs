@@ -1,0 +1,20 @@
+title: Single-cell simulation
+description: CLike · 模型、实验设置与参数依据
+lang: zh-CN
+url: https://suranchen.github.io
+baseurl: /single-cell-simulation-docs
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+kramdown:
+  input: GFM
+  math_engine: mathjax
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
+  - check_docs.py
+  - LOCAL_PROVENANCE.md
